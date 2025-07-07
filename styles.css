@@ -89,7 +89,7 @@ ion-icon:hover {
   border: 1px solid #999;
 }
 
-.key-top:active {
+#div-move:active .key-top {
   transform: rotate(43deg) skew(-20deg) translateX(30px) translateY(25px);
 }
 .key-bottom-wrapper {
