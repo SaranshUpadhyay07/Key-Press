@@ -1,0 +1,167 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: rgb(92, 92, 92);
+}
+
+.container {
+  width: 670px;
+  height: 65%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.container-dark {
+  background-color: black;
+  color: aliceblue;
+}
+
+.container-light {
+  background-color: rgb(246, 246, 246);
+  color: rgb(0, 0, 0);
+}
+
+#big-container, .config-btn-light, .config-btn-dark {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.accesibility {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1rem;
+}
+
+.configure {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+}
+
+.additional {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+}
+ion-icon:hover {
+  cursor: pointer;
+}
+
+.form-range {
+  width: 170px;
+}
+
+.keyboard-key {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  transform: perspective(800px) rotateX(10deg);
+   --brightness: 1;
+}
+
+.key-top,
+.key-left-top,
+.key-right-top {
+  position: absolute;
+}
+
+.key-top {
+  color: aliceblue;
+  width: 80px;
+  height: 80px;
+  border-radius: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  cursor: pointer;
+  transform: rotate(43deg) skew(-20deg) translateX(7px) translateY(5px);
+  transition: transform 0.4s ease;
+  background: linear-gradient(135deg, #3a3a3a, #404040);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    inset -1px -1px 4px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 5px rgba(0, 0, 0, 0.6),
+    4px 4px 6px rgba(0, 0, 0, 0.8);
+  font-weight: 200;
+  padding-top: 11px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.5rem !important;
+  border: 1px solid #999;
+}
+
+.key-top:active {
+  transform: rotate(43deg) skew(-20deg) translateX(30px) translateY(25px);
+}
+.key-bottom-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* behind top + sides */
+  pointer-events: none;
+}
+.key-bottom {
+  color: aliceblue;
+  background: linear-gradient(to bottom, #111, #000);
+  box-shadow:
+    inset -2px -2px 6px rgba(255, 255, 255, 0.05),
+    6px 6px 12px rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(150, 150, 150, 0.8);
+  width: 145px;
+  height: 145px;
+  transform: rotate(42deg) skew(-18deg) translate(9.5px, 40px);
+  border-radius: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  box-shadow: 12px 12px 0px #626262;
+}
+
+.key-left-top {
+  width: 113px;
+  height: 55px;
+  background: linear-gradient(to bottom, #5c5c5c, #1f1f1f);
+  box-shadow:
+    inset -1px -1px 3px rgba(255, 255, 255, 0.1),
+    2px 2px 4px rgba(0, 0, 0, 0.6);
+  clip-path: polygon(19% 0%, 81% 0%, 97% 95%, 7% 100%);
+  z-index: 2;
+  transform: rotate(45deg) translate(9px, 88px) skewX(38deg);
+  transition: transform 0.4s ease, height 0.4s ease, background 0.4s ease, clip-path 0.4s ease;
+  
+}
+.key-right-top {
+  width: 100px;
+  height: 80px;
+  background: linear-gradient(to bottom right, #3a3a3a, #0d0d0d);
+  box-shadow:
+    inset -1px -1px 3px rgba(255, 255, 255, 0.1),
+    2px 2px 5px rgba(0, 0, 0, 0.6);
+  clip-path: polygon(24% 0%, 97% 0%, 95% 85%, 0% 100%);
+  z-index: 2;
+  transform: rotate(-22deg) translate(-4px, 69px) skew(-1deg);
+  transition: transform 0.4s ease, height 0.4s ease, clip-path 0.4s ease;
+}
+#div-move:active .key-left-top {
+  height:40px;
+  transform: rotate(45deg) translate(21px, 103px) skewX(38deg);
+  clip-path: polygon(21.5% 0%, 84% 0%, 97% 95%, 7% 100%);
+}
+
+#div-move:active .key-right-top {
+  height:66px;
+  transform: rotate(-22deg) translate(-15px, 85px) skew(-1deg);
+  clip-path: polygon(24% 0%, 90.5% 0%, 92% 85%, 5% 100%);
+}
+.container-dark .key-left-top {
+  background: linear-gradient(to bottom, #555, #222);
+  box-shadow:
+    inset -1px -1px 3px rgba(255, 255, 255, 0.08),
+    2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.container-dark .key-right-top {
+  background: linear-gradient(to bottom right, #2f2f2f, #0a0a0a);
+  box-shadow:
+    inset -1px -1px 3px rgba(255, 255, 255, 0.1),
+    2px 2px 4px rgba(0, 0, 0, 0.7);
+}
