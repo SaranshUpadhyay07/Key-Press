@@ -6,7 +6,7 @@ document.getElementById("dark").addEventListener("click", function(){
     document.getElementById("big-container").classList.remove("container-light");
     document.getElementById("big-container").classList.add("container-dark");
 });
-document.querySelector(".key-top").addEventListener("mousedown", () => {
+document.getElementById("div-move").addEventListener("mousedown", () => {
   const audio = document.getElementById("key-sound");
   audio.play();
 })
